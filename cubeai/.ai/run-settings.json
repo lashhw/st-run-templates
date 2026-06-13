@@ -1,0 +1,38 @@
+{
+  "args": {
+    "model": "/mnt/shared/onnx-pfq/incept-im100-vm128-DupNAS-MC-0_w0.5_ir128_split_quantized.onnx",
+    "valinput": "",
+    "valoutput": "",
+    "batch-size": 1,
+    "mode": "target",
+    "optimization": "balanced",
+    "name": "network",
+    "verbosity": 1,
+    "c-api": "st-ai",
+    "workspace": "/home/lashhw/.stm32cubeaistudio/workspace/manual/.ai/st_ai_ws",
+    "output": "/home/lashhw/.stm32cubeaistudio/workspace/manual/.ai/st_ai_output",
+    "memory-pool": "/home/lashhw/.stm32cubeaistudio/workspace/manual/.ai/mempools.json",
+    "target": "stm32f7"
+  },
+  "mempools": [
+    {
+      "name": "RAM",
+      "size": 327680,
+      "offset": 536870912,
+      "driver": "RAM",
+      "max": 327680,
+      "mode_available": []
+    },
+    {
+      "driver": "FMC",
+      "name": "External SDRAM",
+      "max": 16777216,
+      "offset": 3221225472,
+      "size": 16777216,
+      "mode_available": []
+    }
+  ],
+  "exportWeightsAsBin": false,
+  "copyWeightsToRam": false,
+  "automaticFlash": true
+}

@@ -1,0 +1,34 @@
+config load "/home/lashhw/.stm32cubeaistudio/workspace/manual/manual.ioc"
+project toolchain STM32CubeIDE
+
+project toolchain "STM32CubeIDE"
+set mode RCC HSE-External-Oscillator
+config save
+set ip parameters CORTEX_M7 CPU_ICache Enabled
+set ip parameters CORTEX_M7 CPU_DCache Enabled
+set ip parameters CORTEX_M7 MPU_Control MPU_PRIVILEGED_DEFAULT
+set ip parameters CORTEX_M7 "Enable-Cortex_Memory_Protection_Unit_Region0_Settings" "MPU_REGION_ENABLE"
+set ip parameters CORTEX_M7 "BaseAddress-Cortex_Memory_Protection_Unit_Region0_Settings" "0xC0000000"
+set ip parameters CORTEX_M7 "Size-Cortex_Memory_Protection_Unit_Region0_Settings" "MPU_REGION_SIZE_16MB"
+set ip parameters CORTEX_M7 "AccessPermission-Cortex_Memory_Protection_Unit_Region0_Settings" "MPU_REGION_FULL_ACCESS"
+set ip parameters CORTEX_M7 "DisableExec-Cortex_Memory_Protection_Unit_Region0_Settings" "MPU_INSTRUCTION_ACCESS_ENABLE"
+set ip parameters CORTEX_M7 "IsShareable-Cortex_Memory_Protection_Unit_Region0_Settings" "MPU_ACCESS_NOT_SHAREABLE"
+set ip parameters CORTEX_M7 "IsCacheable-Cortex_Memory_Protection_Unit_Region0_Settings" "MPU_ACCESS_CACHEABLE"
+set ip parameters CORTEX_M7 "IsBufferable-Cortex_Memory_Protection_Unit_Region0_Settings" "MPU_ACCESS_BUFFERABLE"
+set ip parameters CORTEX_M7 "Enable-Cortex_Memory_Protection_Unit_Region1_Settings" "MPU_REGION_ENABLE"
+set ip parameters CORTEX_M7 "BaseAddress-Cortex_Memory_Protection_Unit_Region1_Settings" "0x90000000"
+set ip parameters CORTEX_M7 "Size-Cortex_Memory_Protection_Unit_Region1_Settings" "MPU_REGION_SIZE_16MB"
+set ip parameters CORTEX_M7 "AccessPermission-Cortex_Memory_Protection_Unit_Region1_Settings" "MPU_REGION_FULL_ACCESS"
+set ip parameters CORTEX_M7 "DisableExec-Cortex_Memory_Protection_Unit_Region1_Settings" "MPU_INSTRUCTION_ACCESS_ENABLE"
+set ip parameters CORTEX_M7 "IsShareable-Cortex_Memory_Protection_Unit_Region1_Settings" "MPU_ACCESS_NOT_SHAREABLE"
+set ip parameters CORTEX_M7 "IsCacheable-Cortex_Memory_Protection_Unit_Region1_Settings" "MPU_ACCESS_CACHEABLE"
+set ip parameters CORTEX_M7 "IsBufferable-Cortex_Memory_Protection_Unit_Region1_Settings" "MPU_ACCESS_BUFFERABLE"
+project set heapsize 0x800
+project set stacksize 0x2000
+set gpio parameters PB7 GPIO_PuPd GPIO_PULLUP
+set pin PB7 USART1_RX
+set pin PA9 USART1_TX
+set mode USART1 Asynchronous
+config save
+set ip parameters USART1 BaudRate 115200
+set gpio parameters PB7 GPIO_PuPd GPIO_PULLUP

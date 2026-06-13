@@ -1,0 +1,20 @@
+{
+  "toolchain": "STM32CubeIDE",
+  "variant": "ApplicationTemplate",
+  "fromMx": false,
+  "isGenerated": true,
+  "name": "manual",
+  "createdAt": 1781092779855,
+  "lastModified": 1781093371659,
+  "lastAccessed": 1781093371659,
+  "path": "/home/lashhw/.stm32cubeaistudio/workspace",
+  "board": "STM32F746G-DISCO",
+  "mcu": "",
+  "type": "BYOM",
+  "lastGenerationRunId": "run-1",
+  "uartInstance": {
+    "usart": "USART1",
+    "txpin": "PA9",
+    "rxpin": "PB7"
+  }
+}
